@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 13, 2022 2:31:52 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Model.Disciplina" table="disciplina" catalog="universidade">
+        <id name="codigo" type="int">
+            <column name="codigo" />
+            <generator class="assigned" />
+        </id>
+        <property name="cargaHoraria" type="string">
+            <column name="cargaHoraria" length="10" not-null="true" />
+        </property>
+        <property name="descricao" type="string">
+            <column name="descricao" length="1000" not-null="true" />
+        </property>
+        <set name="notarealizas" table="notarealiza" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codigoDisciplina" not-null="true" />
+            </key>
+            <one-to-many class="Model.Notarealiza" />
+        </set>
+    </class>
+</hibernate-mapping>

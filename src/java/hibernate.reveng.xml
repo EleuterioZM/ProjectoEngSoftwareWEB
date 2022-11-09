@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="universidade"/>
+  <table-filter match-name="notarealiza"/>
+  <table-filter match-name="disciplina"/>
+  <table-filter match-name="avaliacao"/>
+  <table-filter match-name="estudante"/>
+  <table-filter match-name="users"/>
+  <table-filter match-name="pessoa"/>
+  
+  <property name="show_sql">true</property>
+   <property name="hbm2ddl.auto">update</property>
+    <mapping class="Modelo.Pessoa"/>
+    <mapping class="Modelo.Users"/>
+    <mapping class="Modelo.Estudante"/>
+    <mapping class="Modelo.Avaliacao"/>
+    <mapping class="Modelo.Disciplina"/>
+    <mapping class="Modelo.Notarealiza"/>
+</hibernate-reverse-engineering>

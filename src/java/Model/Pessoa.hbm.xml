@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 13, 2022 2:31:52 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Model.Pessoa" table="pessoa" catalog="universidade">
+        <id name="idPessoa" type="java.lang.Integer">
+            <column name="idPessoa" />
+            <generator class="identity" />
+        </id>
+        <property name="apelido" type="string">
+            <column name="apelido" />
+        </property>
+        <property name="nome" type="string">
+            <column name="nome" />
+        </property>
+    </class>
+</hibernate-mapping>
